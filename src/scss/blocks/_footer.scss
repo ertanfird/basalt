@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  position: absolute;
+  margin: 0 auto;
+  font-size: 16px;
+
+  &__text {
+    color: #DFDFDF;
+    margin-right: 6px;
+    font-family: "Iosevka-bold";
+  }
+
+  &__link {
+    color: #DFDFDF;
+    text-decoration: none;
+    position: relative;
+    font-family: "MrDafoe";
+    font-size: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: url("../img/logo.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 50%;
+      right: -10px;
+      transform: translate(100%, -50%);
+      transition: background-size ease 0.28s;
+    }
+
+    &:hover {
+      &::after{
+        background-size: 74%;
+      }
+    }
+  }
+  &__link:hover {
+    text-decoration: underline;
+  }
+  &__link:visited {
+    color: #DFDFDF;
+  }
+}

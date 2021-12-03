@@ -1,0 +1,19 @@
+.background-hash {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__symbol {
+    width: 0.7em;
+    height: 1em;
+    line-height: 1em;
+    font-size: 17px;
+    text-align: center;
+    color: #474747;
+  }
+}
