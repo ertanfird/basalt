@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Service for salt password's",
   "main": "src/js/index.js",
-  "homepage": "",
+  "homepage": "https://ertanfird.github.io/baSalt/",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
