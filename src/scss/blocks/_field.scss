@@ -12,7 +12,7 @@
   box-shadow: 2px 2px 8px #1d1d1d;
 
   @include mobile {
-    width: calc(100% - 20px);
+    width: 100%;
   }
 
   &__item {

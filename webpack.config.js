@@ -13,7 +13,7 @@ const assetFilename = (ext) => isProd ? `[name].${ext}` : `[hash].${ext}`;
 const plugins = () => {
   const basePlugins = [
     new HtmlWebpackPlugin({
-      title: 'Ertanfird portfolio',
+      title: 'baSalt',
       template: path.resolve(__dirname, './src/template.html'),
       filename: 'index.html',
       minify: {

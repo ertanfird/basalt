@@ -20,6 +20,7 @@
     position: relative;
     font-family: "MrDafoe";
     font-size: 24px;
+    padding-right: 54px;
 
     &::after {
       content: "";
@@ -32,8 +33,8 @@
       background-position: center;
       background-repeat: no-repeat;
       top: 50%;
-      right: -10px;
-      transform: translate(100%, -50%);
+      right: -21px;
+      transform: translate(-50%, -50%);
       transition: background-size ease 0.28s;
     }
 
