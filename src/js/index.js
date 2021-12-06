@@ -9,8 +9,10 @@ const copyPass = document.querySelector('#copyPass');
 const bgHash = document.querySelector('.background-hash');
 
 //Functions======================================
+
+/****************************/
 function genericBgHash() {
-  for (let i = 0; i < ((window.innerWidth / (16 * 0.7)) * (window.innerHeight / (16 * 1))); i++ ) {
+  for (let i = 0; i < ((window.innerWidth / (16 * 0.7)) * (window.innerHeight / (16 * 1))); i++) {
     let addSymbol = document.createElement('div');
     addSymbol.classList.add('background-hash__symbol');
     let text = document.createTextNode(randomSymbol());
@@ -29,13 +31,20 @@ function randomSymbol() {
 };
 
 function dynamicBgHash() {
-  for (let i = 0; i < (bgHash.childNodes.length / 10); i++) {
-    bgHash.childNodes[(Math.floor(Math.random() * bgHash.childNodes.length) + 1)].innerHTML = randomSymbol();
+  for (let i = 0; i < (bgHash.childNodes.length / 20); i++) {
+    bgHash.childNodes[(Math.floor(Math.random() * bgHash.childNodes.length))].innerHTML = randomSymbol();
   }
 };
 
-genericBgHash();
-let timerId = setInterval(() => dynamicBgHash(), 200);
+const platform = navigator.platform.toLowerCase(),
+  iosPlatforms = ['iphone', 'ipad', 'ipod', 'ipod touch'];
+
+if (platform.includes('mac') || platform.includes('win') || /linux/.test(platform)) {
+  genericBgHash();
+  let timerId = setInterval(() => dynamicBgHash(), 200);
+};
+
+/****************************/
 
 /****************************/
 function generateHash(e) {
@@ -158,31 +167,31 @@ function symbolize(substring, prototype) {
     case 26:
       return substring + "~";
       break;
-      case 27:
+    case 27:
       return substring.substring(0, 1) + "q" + substring.substring(1, 3);
       break;
-      case 28:
+    case 28:
       return substring.substring(0, 1) + "a" + substring.substring(1, 3);
       break;
-      case 29:
+    case 29:
       return substring.substring(0, 1) + "z" + substring.substring(1, 3);
       break;
-      case 30:
+    case 30:
       return substring.substring(0, 1) + "w" + substring.substring(1, 3);
       break;
-      case 31:
+    case 31:
       return substring.substring(0, 1) + "s" + substring.substring(1, 3);
       break;
-      case 32:
+    case 32:
       return substring.substring(0, 1) + "x" + substring.substring(1, 3);
       break;
-      case 33:
+    case 33:
       return substring.substring(0, 1) + "e" + substring.substring(1, 3);
       break;
-      case 34:
+    case 34:
       return substring.substring(0, 1) + "d" + substring.substring(1, 3);
       break;
-      case 35:
+    case 35:
       return substring.substring(0, 1) + "c" + substring.substring(1, 3);
       break;
     default:
